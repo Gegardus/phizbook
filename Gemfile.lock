@@ -347,6 +347,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rspec-rails
   rubocop
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
