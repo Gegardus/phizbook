@@ -1,16 +1,22 @@
 Rails.application.routes.draw do
-  get 'likes/create'
-  get 'comments/new'
-  get 'comments/create'
-  get 'posts/index'
-  get 'posts/show'
-  get 'posts/new'
-  get 'posts/create'
-  get 'users/index'
-  get 'users/show'
+  root 'users#index'
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :users, only: %i[index show] do
+    resources :friendships, only: %i[create] do
+      collection do
+        get 'accept_friend'
+        get 'decline_friend'
+      end
+    end
+  end
+  
+  # PUT and PATCH requests are used to update existing data
+  put '/users/:id', to:  'users#update_img'
 
-  # Defines the root path route ("/")
-  root "users#index"
+  resources :posts, only: %i[index new create show destroy] do
+      resources :likes, only: %i[create]
+  end
+  resources :comments, only: %i[new create destroy] do
+    resources :likes, only: %i[create]
+  end 
 end
