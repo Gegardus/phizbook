@@ -10,7 +10,7 @@
       </div> -->
       <div class="modal-body">
         <h5 class="modal-title" id="decisionModalLabel">Friend Request from <%= "#{object.full_name}" %></h5>
-      </div>
+      </div>      
       <div class="modal-footer">
         <%= link_to accept_friend_user_friendships_path(object) do %>
           <button type="button" class="btn btn-accept text-white font-weight-bold"> <i class="fas fa-user-check"></i> Accept</button>
@@ -19,6 +19,7 @@
           <button type="button" class="btn btn-decline text-white font-weight-bold"><i class="fas fa-user-times"></i> Decline</button>
         <% end %>
       </div>
+      
     </div>
-  </div>
+  </div>  
 </div>

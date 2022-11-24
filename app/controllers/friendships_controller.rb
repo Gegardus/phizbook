@@ -6,7 +6,7 @@ class FriendshipsController < ApplicationController
     # Disallow the ability to send friend request more than once to same person
     return if friend_request_sent?(User.find(params[:user_id]))
     # Disallow the ability to send friend request to someone who already sent you one
-    return if friend_request_recieved?(User.find(params[:user_id]))
+    return if friend_request_received?(User.find(params[:user_id]))
 
     @user = User.find(params[:user_id])
     # Since this friendships controller create method is a nested route under the users resource 

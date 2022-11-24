@@ -62,7 +62,9 @@
           </div>
         </div>
           <%= render 'friendships/decisionModal', object: user %>
-        <br><br>
+        <br>
+        
+        <br>
       <% end %>
   </div>
 <% end %>
@@ -81,7 +83,7 @@
             </div>
             <div class="col-auto p-0 px-1">|</div>
             <div class="col-auto p-0">
-              <%= link_to user_friendships_path(user), method: :post do %>
+              <%= button_to user_friendships_path(user), method: :post do %>
                 <button class= "btn btn-user shadow"> <i class="fas fa-share-square"></i> Send Friend Request? </button>
               <% end %>
             </div>

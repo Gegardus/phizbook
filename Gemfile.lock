@@ -285,6 +285,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
@@ -349,6 +352,7 @@ DEPENDENCIES
   rubocop
   sassc-rails
   selenium-webdriver
+  simple_form
   sprockets-rails
   stimulus-rails
   turbo-rails
