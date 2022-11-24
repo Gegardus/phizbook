@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # PUT and PATCH requests are used to update existing data
   put '/users/:id', to:  'users#update_img'
 
+  get '/saw_notification', to: 'users#saw_notification', as: 'saw_notice'
+  
   resources :posts, only: %i[index new create show destroy] do
       resources :likes, only: %i[create]
   end
