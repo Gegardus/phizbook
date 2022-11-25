@@ -1,0 +1,6 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+@import 'custom';
+
+*, *::before, *::after { box-sizing: border-box; }
+*:hover { outline: 1px blue solid; }
