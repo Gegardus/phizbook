@@ -22,3 +22,4 @@ Rails.application.routes.draw do
     resources :likes, only: %i[create]
   end 
 end
+
